@@ -1,0 +1,523 @@
+
+html{
+    scroll-behavior: smooth;
+}
+
+.top{
+    background-color: rgba(82, 119, 61, 0.9);
+    display: flex; /*讓子元素水平排列*/
+    align-items: center; /*讓header和nav垂直置中*/
+    position: sticky;
+    top: 0%;
+    z-index: 10000;
+}
+
+
+body{
+    background-color: #879f4f;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+header{
+    font-size: 20px;
+    font-weight: 100;
+    margin-left: 30px;
+}
+
+
+section {
+    width: 100%;
+}
+
+
+nav {
+    display: flex;
+    gap: 40px;
+    font-size: 35px;
+    font-weight: 100;
+    margin: auto;
+}
+nav a{
+    text-decoration: none;/*取消底線*/
+    color: #1b4332;
+    transition: transform 0.3 ease;/*一個過渡動畫，在滑鼠移入跟移入後用0.3秒絲滑放大或縮小--使用transition+transform:scale*/
+}
+nav a:hover{
+    transform: scale(1.5);/*放大1.1倍*/
+}
+
+
+.first{
+    background-color: #879f4f;
+    display: flex;
+    align-items: center;
+    gap: 60px; /*子元素section1和子元素article間的距離設40px*/
+    padding: 50px 150px; 
+}
+.first img{
+    width: 400px;
+    height: 430px;
+    border-radius: 50%;/*控制邊角的圓弧程度，寬高不同時為橢圓形*/
+    object-fit: cover;/*讓照片填滿整個型且不變形*/
+    margin: 50px 0px 10px 150px;
+}
+.first article p{
+    margin: 25px 0px;
+    font-size: 30px;
+    font-family: "Momo Signature", serif;
+}
+.name{
+    font-size: 40px;
+    font-style: italic;
+}
+
+.Aboutme{
+    background-color: #90a955;
+    display: flex;
+    padding: 100px 0px;
+    position: relative;
+    margin: 100px auto;
+}
+.me{
+    position: absolute;
+    margin: 80px auto;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: underline;
+}
+.aboutleft{
+    background-color: #F2E8CF;
+    width: 750px;
+    height: 400px;
+    padding: 0px 25px 0px 20px;
+    margin: 80px 100px;
+    box-sizing: border-box;
+    border-radius: 40px;
+}
+.tag{
+    margin: 40px auto;
+    font-style: italic;
+    font-size: 20px;
+}
+.tv{
+   background-color: black;
+   position: absolute;
+   width: 600px;
+   height: 330px;
+   margin: 130px 950px;
+   border:10px solid black;
+   box-sizing: border-box;
+   border-radius: 10px;
+}
+.tv-screen{
+   width: 100%;
+   height: 100%;
+   position: relative;
+}
+.tv-screen img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#tvimg{
+    opacity: 1; /*照片完全顯示*/
+    transition: opacity 0.5s ease;
+    /*transition=設定動畫過度效果;opacity=指定動畫的屬性;ease=動畫速度先曼在快最後在慢--使用transition:opacity*/}
+.tv-stand{
+    position: absolute;
+    width: 200px;
+    height: 10px;
+    background-color: black;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    /*具有效正的功能，因為移動的是元素的左邊緣，所以要往回移元素長度的一半才可能在中間*/
+}
+
+
+.Skill{
+    background-color: #879f4f;
+    justify-content: space-between;
+    margin: 50px 0px 450px;
+}
+.Skill-item{
+   margin: 80px 0px 80px -150px;
+
+}
+.Program{
+    background-color: #BC4749;
+    border-radius: 100px;
+    border: 5px solid black;
+    height: 80px;
+    width: 350px;
+    padding: 0px 40px;
+}
+.sk{
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 60px;
+    margin-top: 100px;
+}
+.skill-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+}
+.Skills{
+    background-color: #BC4749;
+    border: 5px solid black;
+    border-radius: 50px;
+    height: 80px;
+    width: 350px; 
+    padding: 0px 40px;
+    margin: 0px -50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.progress{
+    width: 750px;
+    height: 30px;
+    background-color: #95d5b2;
+    border-radius: 20px;
+    overflow: hidden;/*讓動態的填色不會超過原角*/
+}
+.pathonskill{
+    height: 100%;
+    background-color: #1b4332;
+    border-radius: 20px;
+    width: 0;
+    animation: fill 4s ease-in infinite; 
+    /*使用動態能力呈現的方式，會依照程度不同讓顏色逐漸填滿到指定位置，並用infinite循環呈現--使用animation*/
+}
+@keyframes fill{ /*動態的填滿，由0%跑到60%*/
+    from{
+        width: 0;
+    }
+    to{
+        width: 60%;  
+    }
+}
+.javaskill{
+    height: 100%;
+    background-color: #1b4332;
+    border-radius: 20px;
+    width: 0;
+    animation: fillj 4s ease-in infinite;/*如pathonskill的功能*/
+}
+@keyframes fillj{
+    from{
+        width: 0;
+    }
+    to{
+        width: 65%;  
+    }
+}
+.htmlskill{
+    height: 100%;
+    background-color: #1b4332;
+    border-radius: 20px;
+    width: 0;
+    animation: fillh 4s ease-in infinite;/*如pathonskill的功能*/
+}
+@keyframes fillh{
+    from{
+        width: 0;
+    }
+    to{
+        width: 70%;  
+    }
+}
+
+.circle-list{
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;/*允許子元素換行*/
+    gap: 30px;
+    width: 320px;
+    flex-shrink: 0;
+    margin: 50px 50px;
+}
+.circle{
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #95d5b2;
+}
+
+.circle-fill {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: #F2E8CF;
+}
+@property --percent { 
+    syntax: "<percentage>"; /*讓圓環的填滿只會在有百分比的地方*/
+    inherits: false;
+    initial-value: 0%;
+}
+.hcprogress{
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: conic-gradient(
+        #1b4332 0% var(--percent),
+        #95d5b2 var(--percent) 100%
+    );
+
+    animation: hcprogress 4s ease-in infinite;/*動態的圓環能力呈現，會填滿到指定百分比，用時4秒--使用animation*/
+}
+@keyframes hcprogress {/*從0填到指定百分比*/
+    from {
+        --percent: 0%;
+    }
+    to {
+        --percent: 85%;
+    }
+}
+.pcprogress{
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: conic-gradient(
+        #1b4332 0% var(--percent),
+        #95d5b2 var(--percent) 100%
+    );
+
+    animation: pcprogress 4s ease-in infinite;/*同hcprogress的功能*/
+}
+@keyframes pcprogress {/*從0填到指定百分比*/
+    from {
+        --percent: 0%;
+    }
+    to {
+        --percent: 75%;
+    }
+}
+.bcprogress{
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: conic-gradient(
+        #1b4332 0% var(--percent),
+        #95d5b2 var(--percent) 100%
+    );
+
+    animation: bcprogress 4s ease-in infinite;/*同hcprogress的功能*/
+}
+@keyframes bcprogress {/*從0填到指定百分比*/
+    from {
+        --percent: 0%;
+    }
+    to {
+        --percent: 80%;
+    }
+}
+.ccprogress{
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: conic-gradient(
+        #1b4332 0% var(--percent),
+        #95d5b2 var(--percent) 100%
+    );
+
+    animation: ccprogress 4s ease-in infinite;/*同hcprogress的功能*/
+}
+@keyframes ccprogress {/*從0填到指定百分比*/
+    from {
+        --percent: 0%;
+    }
+    to {
+        --percent: 65%;
+    }
+}
+.circle-text{
+    font-weight: 300px;
+    font-style: italic;
+}
+
+
+.ex-card{
+    background-color: #b8c599;
+    max-width: 1350px;
+    border-radius: 30px;
+    margin: 100px auto;
+    padding: 30px 0px;
+    box-sizing: border-box;
+    
+}
+.Experience{
+    padding: 60px 0px;
+    background-color:#90a955;
+    margin-top: 100px;
+ 
+}
+.ex{
+    text-align: center;
+    margin-bottom: 30px;
+    text-decoration: underline;
+   
+}
+
+.ex-item1{
+    display: flex;
+    align-items: center;
+    margin: 0px 50px ;
+}
+.ex-img1{
+    width: 50%;
+    height: 420px;
+    position: relative;
+    overflow: hidden;
+    margin: 0px 10px;
+    flex-shrink: 0;
+}
+.ex-img image{
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    object-fit: contain;
+}
+.ex-text1{
+    flex: 1;/*讓文字使用剩下的區塊*/
+    padding: 0px 10px;
+    text-align: justify;/*左右對齊*/
+    font-size: 25px;
+}
+.ex-item2{
+    display: flex;
+    align-items: center;
+    margin: 50px 50px;
+    flex-direction: row-reverse;/*設定排列方向，橫向排列-->反轉*/
+    gap: 50px;
+}
+.ex-img2{
+    width: 50%;
+    height: 420px;
+    position: relative;
+    overflow: hidden;
+    margin: 0px 10px;
+    flex-shrink: 0;
+}
+.ex-img image{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    object-fit: contain;
+}
+.ex-text2{
+    flex: 1;/*讓文字使用剩下的區塊*/
+    padding: 0px 10px;
+    text-align: justify;/*左右對齊*/
+    font-size: 25px;
+}
+.ex-item3{
+    display: flex;
+    align-items: center;
+    margin: 50px 50px;
+}
+.ex-img3{
+    width: 50%;
+    height: 420px;
+    position: relative;
+    overflow: hidden;
+    margin: 0px 10px;
+    flex-shrink: 0;
+}
+.ex-img image{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    object-fit: contain;
+}
+.ex-text3{
+    flex: 1;/*讓文字使用剩下的區塊*/
+    padding: 0px 10px;
+    text-align: justify;/*左右對齊*/
+    font-size: 25px;
+}
+.ex-item4{
+    display: flex;
+    align-items: center;
+    margin: 50px 50px;
+    flex-direction: row-reverse;
+}
+.ex-img4{
+    width: 50%;
+    height: 420px;
+    position: relative;
+    overflow: hidden;
+    margin: 0px 10px;
+    flex-shrink: 0;
+}
+.ex-img image{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    object-fit: contain;
+}
+.ex-text4{
+    flex: 1;/*讓文字使用剩下的區塊*/
+    padding: 0px 20px;
+    text-align: justify;/*左右對齊*/
+    font-size: 25px;
+}
+
+.Contact {
+    display: flex;
+    align-items: center;
+    background-color: #535c3d;
+    height: 180px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    gap: 40px;
+   
+}
+.Contact image {
+    width: 5px;
+    height: 5px;
+    object-fit: contain;
+}
+.social-icons{
+    display: grid;/*網路排版*/
+    grid-template-columns: repeat(2,auto);/*向下排兩個一樣的欄位*/
+    gap: 10px;
+}
+.social-icons a{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: black;
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: 800;
+
+}
