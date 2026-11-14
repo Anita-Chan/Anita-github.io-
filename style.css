@@ -15,7 +15,7 @@ html{
 
 body{
     background-color: #879f4f;
-    margin: 0px;
+    margin: 0%;
     padding: 0px;
 }
 
@@ -53,19 +53,19 @@ nav a:hover{
     background-color: #879f4f;
     display: flex;
     align-items: center;
-    gap: 60px; /*子元素section1和子元素article間的距離設40px*/
-    padding: 50px 150px; 
+    gap: 80px; /*子元素section1和子元素article間的距離設40px*/
+    padding: 70px 150px; 
 }
 .first img{
-    width: 400px;
-    height: 430px;
+    width: 350px;
+    height: 380px;
     border-radius: 50%;/*控制邊角的圓弧程度，寬高不同時為橢圓形*/
     object-fit: cover;/*讓照片填滿整個型且不變形*/
     margin: 50px 0px 10px 150px;
 }
 .first article p{
     margin: 25px 0px;
-    font-size: 30px;
+    font-size: 20px;
     font-family: "Momo Signature", serif;
 }
 .name{
@@ -90,24 +90,24 @@ nav a:hover{
 }
 .aboutleft{
     background-color: #F2E8CF;
-    width: 750px;
-    height: 400px;
+    width: 400px;
+    height: 350px;
     padding: 0px 25px 0px 20px;
-    margin: 80px 100px;
+    margin: 80px 60px;
     box-sizing: border-box;
     border-radius: 40px;
 }
 .tag{
     margin: 40px auto;
     font-style: italic;
-    font-size: 20px;
+    font-size: 15px;
 }
 .tv{
    background-color: black;
    position: absolute;
    width: 600px;
    height: 330px;
-   margin: 130px 950px;
+   margin: 80px 550px;
    border:10px solid black;
    box-sizing: border-box;
    border-radius: 10px;
@@ -151,9 +151,12 @@ nav a:hover{
     background-color: #BC4749;
     border-radius: 100px;
     border: 5px solid black;
-    height: 80px;
-    width: 350px;
-    padding: 0px 40px;
+    height: 60px;
+    width: 250px;
+    padding: 10px 40px;
+}
+.p{
+   text-align: center;
 }
 .sk{
     text-align: center;
@@ -172,16 +175,19 @@ nav a:hover{
     background-color: #BC4749;
     border: 5px solid black;
     border-radius: 50px;
-    height: 80px;
-    width: 350px; 
-    padding: 0px 40px;
+    height: 60px;
+    width: 250px; 
+    padding: 10px 40px;
     margin: 0px -50px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+.o{
+    text-align: center; 
+}
 .progress{
-    width: 750px;
+    width: 550px;
     height: 30px;
     background-color: #95d5b2;
     border-radius: 20px;
@@ -241,7 +247,7 @@ nav a:hover{
     gap: 30px;
     width: 320px;
     flex-shrink: 0;
-    margin: 50px 50px;
+    margin: 45px 50px;
 }
 .circle{
     height: 130px;
@@ -362,7 +368,7 @@ nav a:hover{
     background-color: #b8c599;
     max-width: 1350px;
     border-radius: 30px;
-    margin: 100px auto;
+    margin: 100px 70px;
     padding: 30px 0px;
     box-sizing: border-box;
     
@@ -384,13 +390,14 @@ nav a:hover{
     display: flex;
     align-items: center;
     margin: 0px 50px ;
+    gap: 20px;
 }
 .ex-img1{
     width: 50%;
-    height: 420px;
+    height: 400px;
     position: relative;
     overflow: hidden;
-    margin: 0px 10px;
+    margin: 30px 15px 0px;
     flex-shrink: 0;
 }
 .ex-img image{
@@ -404,18 +411,18 @@ nav a:hover{
     flex: 1;/*讓文字使用剩下的區塊*/
     padding: 0px 10px;
     text-align: justify;/*左右對齊*/
-    font-size: 25px;
+    font-size: 20px;
 }
 .ex-item2{
     display: flex;
     align-items: center;
     margin: 50px 50px;
     flex-direction: row-reverse;/*設定排列方向，橫向排列-->反轉*/
-    gap: 50px;
+    gap: 20px;
 }
 .ex-img2{
     width: 50%;
-    height: 420px;
+    height: 400px;
     position: relative;
     overflow: hidden;
     margin: 0px 10px;
@@ -433,16 +440,17 @@ nav a:hover{
     flex: 1;/*讓文字使用剩下的區塊*/
     padding: 0px 10px;
     text-align: justify;/*左右對齊*/
-    font-size: 25px;
+    font-size: 20px;
 }
 .ex-item3{
     display: flex;
     align-items: center;
     margin: 50px 50px;
+    gap: 20px;
 }
 .ex-img3{
     width: 50%;
-    height: 420px;
+    height: 400px;
     position: relative;
     overflow: hidden;
     margin: 0px 10px;
@@ -460,17 +468,18 @@ nav a:hover{
     flex: 1;/*讓文字使用剩下的區塊*/
     padding: 0px 10px;
     text-align: justify;/*左右對齊*/
-    font-size: 25px;
+    font-size: 20px;
 }
 .ex-item4{
     display: flex;
     align-items: center;
     margin: 50px 50px;
     flex-direction: row-reverse;
+    gap: 20px;
 }
 .ex-img4{
     width: 50%;
-    height: 420px;
+    height: 400px;
     position: relative;
     overflow: hidden;
     margin: 0px 10px;
@@ -488,7 +497,7 @@ nav a:hover{
     flex: 1;/*讓文字使用剩下的區塊*/
     padding: 0px 20px;
     text-align: justify;/*左右對齊*/
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .Contact {
@@ -502,21 +511,21 @@ nav a:hover{
    
 }
 .Contact image {
-    width: 5px;
-    height: 5px;
+    width: 3px;
+    height: 3px;
     object-fit: contain;
 }
 .social-icons{
     display: grid;/*網路排版*/
     grid-template-columns: repeat(2,auto);/*向下排兩個一樣的欄位*/
-    gap: 10px;
+    gap: 8px;
 }
 .social-icons a{
     display: flex;
     align-items: center;
     gap: 15px;
     color: black;
-    font-size: 25px;
+    font-size: 20px;
     text-decoration: none;
     font-weight: 800;
 
